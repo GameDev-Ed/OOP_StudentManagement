@@ -9,5 +9,8 @@ private:
 public:
 	UndergraduateStudent(const string& firstname, const string& lastname, const float _StudentId, const string& Major) : Student(firstname, lastname, _StudentId), Major(Major) {};
 
-
+	void StudentDetails() const override {
+		Student::StudentDetails();
+		cout << "Major: " << Major << endl;
+	}
 };

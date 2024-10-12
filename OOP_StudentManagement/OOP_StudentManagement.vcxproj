@@ -131,6 +131,7 @@
     <ClCompile Include="OOP_StudentManagement.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Course.h" />
     <ClInclude Include="GraduateStudent.h" />
     <ClInclude Include="Library.h" />
     <ClInclude Include="Student.h" />
