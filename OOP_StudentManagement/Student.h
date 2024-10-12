@@ -7,9 +7,14 @@ private:
 	string LastName;
 	float StudentId;
 public:
-	Student(string& firstname, string& lastname, const float _StudentId);
+	Student(const string& firstname, const string& lastname, const float _StudentId) : FirstName(firstname), LastName(lastname), StudentId(_StudentId) {};
 
-	void StudentDetails() const;
+	virtual void StudentDetails() const
+	{
+		cout << "First name: " << FirstName << endl;
+		cout << "last name: " << LastName << endl;
+		cout << "Student: " << StudentId << endl;
+	};
 
 
 	~Student();
