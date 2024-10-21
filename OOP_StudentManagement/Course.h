@@ -10,31 +10,38 @@ private:
 
 
 public:
+
 	Course(const string& name) : courseName(name) {};
 
 
 	// Method to add students to the course
-	void AddStudentToCourse(const vector<Student*>& students) {
-		for (Student* Student : students)
-		{
-			// Add each student pointer to the vector
-			enrolledstudents.push_back(Student);
-		}
+	void AddStudentToCourse(Student* students) {
+		
+		enrolledstudents.push_back(students); // Add each student pointer to the vector
 
 	};
+
+	void RemoveStudentFromCourse(Student* students) {
+		
+		enrolledstudents.clear();// clears the student vector making it empty
+	};
+
 	// Method to display all enrolled students
 	void DisplayStudentsInCoursee() const {
-		cout << "Enrolled students in " << courseName << ":\n";
-		for (const Student* student: enrolledstudents)
+		cout << "Enrolled students in: " << courseName << ":\n";
+		if (enrolledstudents.empty())
 		{
-			if (student)
+			cout << "No one is enrolled in this class!!!" << endl;
+		}
+		else {
+
+			for (const Student* student : enrolledstudents)
 			{
 				student->StudentDetails();// Call the display method of each student
 			}
 		}
 	};
-
-
-
+	// Clean up memory
+	~Course() { for (const Student* student : enrolledstudents) { delete student; } }
 };
 
