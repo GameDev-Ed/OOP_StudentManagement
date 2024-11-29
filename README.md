@@ -1,5 +1,9 @@
 # OOP_StudentManagement
-
+OOP:
+- Encapsulation: The Student class encapsulates the details of a student (name, ID) and provides methods to initialize and display this information, ensuring data is managed within the class.
+- Inheritance: The GraduateStudent and UndergraduateStudent classes inherit from the Student base class, enabling code reuse and the addition of specific attributes like thesis topic and major.
+- Polymorphism: The GraduateStudent and UndergraduateStudent classes override the display method from the Student class to provide customized output, demonstrating polymorphism by allowing different behaviors under the same method name.
+- Abstraction: The Course class abstracts the complexity of managing multiple students by using a list of Student objects and providing simple methods to add students and display their details.
 
 Class Structure:
 
@@ -16,6 +20,7 @@ Functionality:
 
   - The program creates a course, adds both graduate and undergraduate students, and displays their details, showcasing polymorphism through overridden display methods.
   - This structure effectively demonstrates inheritance, encapsulation, and basic polymorphism in C++.
+
 What I have learned:
 
   - I learned how to create and to use a constructor initializer list which is huge help when it comes to being the more effecient way/ optimize!
